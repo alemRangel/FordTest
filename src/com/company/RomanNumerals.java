@@ -5,25 +5,25 @@ import java.util.Map;
 
 public class RomanNumerals {
    // I, V, X, L, C, D, and M
-    private static Map<String, Integer> map = new HashMap<>();
+    private Map<Integer, String> map = new HashMap<>();
     private Integer numToTranslate;
 
     public RomanNumerals(int input) {
         this.numToTranslate = input;
-        map.put("I", 1);
-        map.put("V", 5);
-        map.put("X", 10);
-        map.put("L", 50);
-        map.put("C", 100);
-        map.put("D", 500);
-        map.put("M", 1000);
+        map.put(1, "I");
+        map.put(5, "V");
+        map.put(10, "X");
+        map.put(50, "L");
+        map.put(100, "C");
+        map.put(500, "D");
+        map.put(1000, "M");
     }
 
-    public String traslateArabicNumberToRoman(){
-        return '';
-    }
-
-    private  getPonderation() {
-
+    public String getRoman() {
+        String partialRoman = "";
+        if(map.containsKey(numToTranslate)){
+            partialRoman = map.get(numToTranslate);
+        }
+        return partialRoman;
     }
 }

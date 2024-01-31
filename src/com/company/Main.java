@@ -5,5 +5,8 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
+        int testValue = 5;
+        RomanNumerals romanNumerals = new RomanNumerals(testValue);
+        System.out.println(romanNumerals.getRoman());
     }
 }
